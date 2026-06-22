@@ -64,8 +64,8 @@ cd release/src-rt-6.x.4708 && make rt-ac87u
 ---
 
 ## 3. Branding-integrasjon
-Se `branding/README_branding.md`. Kort: kopier logo-PNG-ene og
-`qeamer_branding.css` inn i `release/src/router/www/`, koble inn stilarket,
+Se `branding/README.md`. Kort: kopier logo-PNG-ene fra `assets/logo/` og
+`branding/branding.css` inn i `release/src/router/www/`, koble inn stilarket,
 sett `motd`/versjonsstreng. Navn + logo vises da i UI, login og SSH.
 
 ---

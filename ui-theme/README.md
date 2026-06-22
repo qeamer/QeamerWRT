@@ -6,9 +6,9 @@ blue→teal gradient accents, clean geometric sans, the Q-ring mark.
 ## Files
 | File | Purpose |
 |------|---------|
-| `qeamer_theme.css` | The theme. Drop into the web UI tree; load after the stock stylesheet. |
+| `theme.css` | The theme. Drop into the web UI tree; load after the stock stylesheet. |
 | `preview.html` | Open in any browser to see the live theme. |
-| `theme_preview.svg` / `.png` | Static mockup of the themed dashboard. |
+| `preview.svg` / `preview.png` | Static mockup of the themed dashboard. |
 
 ## Palette (from the logo)
 - Base `#0F172A` · panels `#1E293B` / `#273449` · lines `#334155`
@@ -17,11 +17,11 @@ blue→teal gradient accents, clean geometric sans, the Q-ring mark.
 - Gradient `135deg, #3B82F6 → #14B8A6`
 
 ## Integration (build phase 2)
-1. Copy `qeamer_theme.css` and the logo PNGs into the web interface directory
+1. Copy `theme.css` and the logo PNGs from `assets/logo/` into the web interface directory
    (`release/src/router/www/`).
 2. In the page head/template, add **after** the stock stylesheet link:
    ```html
-   <link rel="stylesheet" type="text/css" href="qeamer_theme.css">
+   <link rel="stylesheet" type="text/css" href="theme.css">
    ```
 3. The selectors target the stock UI's class names; adjust any that differ in
    your source tree. Keep all colors referencing the `--qw-*` CSS variables so

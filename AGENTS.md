@@ -7,7 +7,7 @@ instruction here blocks a task: **stop and ask**, do not guess.
 ## Hard hardware context (never violate)
 - Target: **AC87U**, **ARMv7 (32-bit)** SoC.
 - Base: an upstream open-source router firmware, **legacy branch** (the older
-  32-bit source tree — see `QeamerWRT_fase1_byggemiljo.md` for the exact source
+  32-bit source tree — see `guides/phase1-build.md` for the exact source
   location). NOT the newer 64-bit successor platform.
 - Build target: `release/src-rt-6.x.4708`, `make rt-ac87u`. Image format: **TRX (`HDR0` header)**.
 
@@ -26,7 +26,7 @@ instruction here blocks a task: **stop and ask**, do not guess.
 ## Scope (where the work happens)
 - Userspace backports: DNS resolver, TLS library (move off the EOL branch), SSH
   daemon, transfer library, core utils, crypto lib, compression lib. See
-  `QeamerWRT_backport_targets.md`.
+  `docs/backport-targets.md`.
 - Firewall (default-drop, IPSet blocklists, rate-limit), `sysctl` hardening.
 - DNS: DNS-over-TLS, DNSSEC, rebind protection.
 - Branding + UI theme in the web interface tree (see `branding/` and `ui-theme/`).

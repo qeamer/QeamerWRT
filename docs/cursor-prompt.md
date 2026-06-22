@@ -14,7 +14,7 @@ legacy-repo ikke .ng, aldri kopier binærer, ikke rør kjernen/WiFi-driveren,
 ikke marker noe som "fungerer" uten bekreftelse fra meg på maskinvaren).
 
 Deretter, ikke skriv kode ennå. Din første oppgave er **Fase 1** fra
-`QeamerWRT_fase1_byggemiljo.md`: hjelpe meg å sette opp byggemiljøet og få en
+`guides/phase1-build.md`: hjelpe meg å sette opp byggemiljøet og få en
 **uendret** `make rt-ac87u` til å bygge og produsere et TRX-image. Vi rører
 hverken branding eller herding før det uendrede imaget bygger og booter.
 

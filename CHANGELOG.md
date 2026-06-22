@@ -4,7 +4,7 @@ Format: dato · type · komponent fra→til · CVE/tiltak · kilde+checksum.
 Hold denne oppdatert ved hver merge til `main`.
 
 ## [Uutgitt]
-### Planlagt (se QeamerWRT_backport_targets.md)
+### Planlagt (se docs/backport-targets.md)
 - security: dnsmasq 2.81 → ≥2.90 (lukker DNSpooq CVE-2020-25681..25687)
 - security: openssl 1.0.2u (EOL) → 1.1.1w (CVE-2022-0778, 2021-3711 m.fl.)
 - security: dropbear 2020.80 → ≥2022.83 (CVE-2021-36369)

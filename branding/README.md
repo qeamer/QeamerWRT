@@ -13,7 +13,7 @@ Kopier disse inn i `release/src/router/www/`:
 |-----|------|
 | `qeamerwrt_logo_dark.png` | Banner-logo (mørk bakgrunn i UI-et) |
 | `qeamerwrt_logo.png` | Lys variant / dokumentasjon |
-| `qeamer_branding.css` | Override-stilark |
+| `branding.css` | Override-stilark |
 
 ## 2. Koble inn stilarket
 
@@ -22,7 +22,7 @@ I `release/src/router/www/Main_Login.asp` og i hovedmalen
 **etter** det eksisterende `<link ... NM_style.css>`:
 
 ```html
-<link rel="stylesheet" type="text/css" href="qeamer_branding.css">
+<link rel="stylesheet" type="text/css" href="branding.css">
 ```
 
 ## 3. Eier-linje i banneret

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="qeamerwrt_logo.svg" alt="QeamerWRT logo" width="600"/>
+<img src="assets/logo/qeamerwrt_logo.svg" alt="QeamerWRT logo" width="600"/>
 
 <br/>
 
@@ -99,7 +99,7 @@ Then in the router web UI:
 
 ## Quick start — Phase 1 (build environment)
 
-See [`QeamerWRT_fase1_byggemiljo.md`](QeamerWRT_fase1_byggemiljo.md) for the full walkthrough. Short version:
+See [`guides/phase1-build.md`](guides/phase1-build.md) for the full walkthrough. Short version:
 
 ```bash
 # Ubuntu 18.04/20.04 VM recommended
@@ -123,14 +123,14 @@ make rt-ac87u 2>&1 | tee ~/build-ac87u.log
 
 | # | Document | What it covers |
 |---|----------|---------------|
-| 1 | [`QeamerWRT_roadmap.md`](QeamerWRT_roadmap.md) | Overall plan, two tracks (add-on vs. custom build), phases, recovery |
-| 2 | [`security/01_trusselbilde_SOHO_ruter.md`](security/01_trusselbilde_SOHO_ruter.md) | What actually attacks home routers |
-| 3 | [`security/02_konsekvensvurdering_AC87U.md`](security/02_konsekvensvurdering_AC87U.md) | Risk assessment, likelihood, residual risk |
-| 4 | [`security/03_sikkerhetspolicy_hjemmenett.md`](security/03_sikkerhetspolicy_hjemmenett.md) | The security standard this project follows |
-| 5 | [`QeamerWRT_backport_targets.md`](QeamerWRT_backport_targets.md) | Component list, target versions, CVEs closed |
-| 6 | [`QeamerWRT_fase0_addon_herding.md`](QeamerWRT_fase0_addon_herding.md) | **Phase 0:** step-by-step add-on hardening checklist (no build needed) |
-| 7 | [`QeamerWRT_fase1_byggemiljo.md`](QeamerWRT_fase1_byggemiljo.md) | Phase 1: build the first unmodified image |
-| 8 | [`branding/README_branding.md`](branding/README_branding.md) | How to bake the logo and name into the UI |
+| 1 | [`docs/roadmap.md`](docs/roadmap.md) | Overall plan, two tracks (add-on vs. custom build), phases, recovery |
+| 2 | [`docs/security/threats.md`](docs/security/threats.md) | What actually attacks home routers |
+| 3 | [`docs/security/risk-assessment.md`](docs/security/risk-assessment.md) | Risk assessment, likelihood, residual risk |
+| 4 | [`docs/security/policy.md`](docs/security/policy.md) | The security standard this project follows |
+| 5 | [`docs/backport-targets.md`](docs/backport-targets.md) | Component list, target versions, CVEs closed |
+| 6 | [`guides/phase0-hardening.md`](guides/phase0-hardening.md) | **Phase 0:** step-by-step add-on hardening checklist (no build needed) |
+| 7 | [`guides/phase1-build.md`](guides/phase1-build.md) | Phase 1: build the first unmodified image |
+| 8 | [`branding/README.md`](branding/README.md) | How to bake the logo and name into the UI |
 | 9 | [`ui-theme/`](ui-theme/) | QeamerWRT visual theme for the web interface |
 
 ---
@@ -139,29 +139,34 @@ make rt-ac87u 2>&1 | tee ~/build-ac87u.log
 
 ```
 QeamerWRT/
-├── README.md                        ← you are here
-├── AGENTS.md                        ← AI assistant constraints (read before letting AI edit)
-├── CONTRIBUTING.md                  ← how to contribute
-├── NOTICE.md                        ← upstream copyright attributions (GPL required)
-├── LICENSE                          ← GPL-2.0-only
-├── CHANGELOG.md                     ← version history
-├── QeamerWRT_roadmap.md             ← master plan
-├── QeamerWRT_fase0_addon_herding.md ← Phase 0 checklist (do tonight, no build)
-├── QeamerWRT_fase1_byggemiljo.md    ← Phase 1 build guide
-├── QeamerWRT_backport_targets.md    ← security component list
-├── security/
-│   ├── 01_trusselbilde_SOHO_ruter.md
-│   ├── 02_konsekvensvurdering_AC87U.md
-│   └── 03_sikkerhetspolicy_hjemmenett.md
+├── README.md          ← you are here
+├── INDEX.md           ← full project map
+├── AGENTS.md          ← AI assistant constraints (read before letting AI edit)
+├── CONTRIBUTING.md    ← how to contribute
+├── NOTICE.md          ← upstream copyright attributions (GPL required)
+├── LICENSE            ← GPL-2.0-only
+├── CHANGELOG.md       ← version history
+├── assets/logo/
+│   ├── qeamerwrt_logo.svg
+│   └── qeamerwrt_logo_dark.svg
+├── docs/
+│   ├── roadmap.md
+│   ├── backport-targets.md
+│   ├── cursor-prompt.md
+│   └── security/
+│       ├── threats.md
+│       ├── risk-assessment.md
+│       └── policy.md
+├── guides/
+│   ├── phase0-hardening.md
+│   └── phase1-build.md
 ├── branding/
-│   ├── README_branding.md
-│   └── qeamer_branding.css
+│   ├── README.md
+│   └── branding.css
 ├── ui-theme/
-│   ├── qeamer_theme.css
+│   ├── theme.css
 │   ├── preview.html
-│   └── theme_preview.svg
-├── qeamerwrt_logo.svg               ← logo (light backgrounds)
-├── qeamerwrt_logo_dark.svg          ← logo (dark backgrounds)
+│   └── preview.svg
 └── .github/
     ├── pull_request_template.md
     └── ISSUE_TEMPLATE/
