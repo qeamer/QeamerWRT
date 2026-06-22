@@ -1,0 +1,137 @@
+/* ============================================================
+   QeamerWRT — web UI theme
+   Matches the QeamerWRT logo: dark slate base, blue→teal accents,
+   clean geometric sans. Load AFTER the stock stylesheet to override.
+   Owner: Kent "Qeamer" Nygjerdet
+   ============================================================ */
+
+:root {
+  --qw-bg:        #0F172A;  /* page background (slate-900)   */
+  --qw-panel:     #1E293B;  /* cards / panels (slate-800)    */
+  --qw-panel-2:   #273449;  /* raised / hover surfaces       */
+  --qw-line:      #334155;  /* borders / dividers            */
+  --qw-text:      #F1F5F9;  /* primary text                  */
+  --qw-muted:     #94A3B8;  /* secondary text                */
+  --qw-dim:       #64748B;  /* labels / captions             */
+  --qw-blue:      #3B82F6;  /* primary accent                */
+  --qw-blue-hi:   #60A5FA;  /* hover / focus                 */
+  --qw-teal:      #14B8A6;  /* secondary accent / success    */
+  --qw-teal-hi:   #2DD4BF;
+  --qw-grad:      linear-gradient(135deg, #3B82F6 0%, #14B8A6 100%);
+  --qw-radius:    12px;
+  --qw-font:      'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+
+/* --- Base --- */
+body, .content, #mainMenu, .container {
+  background: var(--qw-bg) !important;
+  color: var(--qw-text) !important;
+  font-family: var(--qw-font) !important;
+}
+
+/* --- Top banner --- */
+#TopBanner, .banner, #header {
+  background: var(--qw-panel) !important;
+  border-bottom: 1px solid var(--qw-line) !important;
+}
+#qeamer-owner {
+  color: var(--qw-teal-hi);
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-left: 14px;
+}
+
+/* --- Panels / cards --- */
+.formfontdesc, .form_table, .tabclick, .panel, .box, table.FormTable {
+  background: var(--qw-panel) !important;
+  border: 1px solid var(--qw-line) !important;
+  border-radius: var(--qw-radius) !important;
+  color: var(--qw-text) !important;
+}
+
+/* --- Headings --- */
+h1, h2, h3, .formfonttitle {
+  color: var(--qw-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.3px;
+}
+.formfonttitle {
+  border-left: 4px solid transparent;
+  border-image: var(--qw-grad) 1;
+  padding-left: 12px;
+}
+
+/* --- Labels / captions --- */
+.formfontdesc, th, .hint, label {
+  color: var(--qw-muted) !important;
+}
+.label-caps {
+  color: var(--qw-dim) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+/* --- Primary buttons --- */
+.button_gen, input[type=button], .btn-primary, .actionBtn {
+  background: var(--qw-grad) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 9px 18px !important;
+  cursor: pointer;
+  transition: filter .15s ease;
+}
+.button_gen:hover, input[type=button]:hover, .btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+/* --- Secondary buttons --- */
+.btn-secondary {
+  background: var(--qw-panel-2) !important;
+  color: var(--qw-text) !important;
+  border: 1px solid var(--qw-line) !important;
+  border-radius: 8px !important;
+}
+
+/* --- Inputs --- */
+input[type=text], input[type=password], input[type=number], select, textarea {
+  background: var(--qw-bg) !important;
+  color: var(--qw-text) !important;
+  border: 1px solid var(--qw-line) !important;
+  border-radius: 8px !important;
+  padding: 8px 10px !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--qw-blue) !important;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.25) !important;
+}
+
+/* --- Links --- */
+a { color: var(--qw-blue-hi) !important; }
+a:hover { color: var(--qw-teal-hi) !important; }
+
+/* --- Status accents --- */
+.status-ok    { color: var(--qw-teal-hi) !important; }
+.status-warn  { color: #FBBF24 !important; }
+.status-alert { color: #F87171 !important; }
+
+/* --- Left nav --- */
+#mainMenu a, .menu_clicked, .menuExpanded {
+  color: var(--qw-muted) !important;
+}
+.menu_clicked, #mainMenu a:hover {
+  background: var(--qw-panel-2) !important;
+  color: var(--qw-text) !important;
+  border-left: 3px solid var(--qw-teal) !important;
+}
+
+/* --- Tables --- */
+table { border-collapse: collapse !important; }
+th { background: var(--qw-panel-2) !important; color: var(--qw-muted) !important; }
+td { border-bottom: 1px solid var(--qw-line) !important; }
+
+/* --- Footer --- */
+#footer, .copyright { color: var(--qw-dim) !important; }

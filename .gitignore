@@ -1,0 +1,45 @@
+# --- Local-only: referanse-binærer, byggemål, ikke for offentlig repo ---
+_local/
+
+# --- Hemmeligheter: ALDRI commit ---
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+*_rsa
+*_ed25519
+secrets*
+*.secret
+credentials*
+.env
+.env.*
+
+# Ruter-config / NVRAM-dump (kan inneholde passord/nøkler)
+nvram*.txt
+nvram*.cfg
+*.nvram
+*backup*.cfg
+jffs-backup*
+
+# --- Byggeartefakter ---
+build-*.log
+*.o
+*.a
+*.so
+image/
+*/image/
+tmp/
+out/
+
+# --- Firmware-binærer (skal ikke i kildetreet) ---
+*.trx
+*.w
+*.pkgtb
+*.ko
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

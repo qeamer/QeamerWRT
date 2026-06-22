@@ -1,0 +1,36 @@
+QeamerWRT
+Copyright (C) 2026  Kent "Qeamer" Nygjerdet
+
+SPDX-License-Identifier: GPL-2.0-only
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License, version 2, as published
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, see <https://www.gnu.org/licenses/gpl-2.0.html>.
+
+-------------------------------------------------------------------------------
+NOTE ON FULL LICENSE TEXT
+
+This file carries the short GPL-2.0 notice. The complete, canonical license
+text must accompany the project. Add it once, either by:
+
+  * selecting "GNU General Public License v2.0" in your repository host's
+    license picker (it inserts the full canonical text automatically), or
+  * downloading it:
+        curl -o LICENSE.full https://www.gnu.org/licenses/gpl-2.0.txt
+
+-------------------------------------------------------------------------------
+NOTE ON DERIVED WORK
+
+This project is a derivative of upstream firmware released under GPL-2.0.
+Per the license, the original copyright and license notices contained in the
+upstream source files must be preserved in this repository's source tree.
+Those notices live with the code itself; this project's own documentation and
+interface text are independent of them.

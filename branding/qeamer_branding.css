@@ -1,0 +1,34 @@
+/* ============================================================
+   QeamerWRT branding overlay
+   Drop-in CSS for the Asuswrt-Merlin web UI (release/src/router/www)
+   Loaded after the stock stylesheet so it overrides ASUS branding.
+   Owner: Kent "Qeamer" Nygjerdet
+   ============================================================ */
+
+/* --- Top-left logo in the banner --- */
+#TopBanner .logo,
+.logoImg,
+#logo {
+    background-image: url("qeamerwrt_logo_dark.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: left center !important;
+    width: 320px !important;
+    height: 64px !important;
+    text-indent: -9999px;       /* hide stock "ASUS" text */
+}
+
+/* --- Owner / build identity line in the banner --- */
+#qeamer-owner {
+    color: #2DD4BF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-left: 14px;
+}
+
+/* --- Footer copyright override --- */
+#footer .copyright,
+.copyright {
+    color: #94A3B8 !important;
+}
