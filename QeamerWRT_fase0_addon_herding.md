@@ -36,15 +36,21 @@ Logg inn på ruteren (http://192.168.1.1) og sett disse:
 
 ## Del 2 — amtm-tillegg via SSH
 
+> **Forutsetning — USB-pinne kreves.** amtm, Skynet, Diversion og stubby bruker
+> Entware for lagring. Entware krever en USB-minnepinne (≥ 8 GB, ext4) koblet til
+> ruteren. Plugg inn pinnen **før** du starter amtm, og la amtm sette opp Entware
+> som første steg (velg **ep** i amtm-menyen). Uten USB-pinne feiler installasjonen.
+
 SSH inn på ruteren:
 
 ```bash
 ssh admin@192.168.1.1
 ```
 
-### Installer amtm (hvis ikke allerede installert)
+### Installer amtm og Entware (gjør dette først)
 ```bash
 curl -Os https://raw.githubusercontent.com/decoderman/amtm/master/amtm && sh amtm
+# Velg 'ep' i menyen for å sette opp Entware på USB-pinnen
 ```
 
 ---
@@ -76,7 +82,7 @@ Diversion bruker dnsmasq (allerede på ruteren) til å blokkere kjente
 annonse-/malware-/telemetri-domener for alle enheter på LAN-et.
 
 Anbefalt konfigurasjon under installasjon:
-- Blokkliste: **Stephen Black** (stor, godt vedlikeholdt)
+- Blokkliste: **Steven Black** (StevenBlack/hosts — stor, godt vedlikeholdt)
 - Update schedule: daglig
 
 ---
@@ -94,8 +100,8 @@ Anbefalte resolvers under installasjon:
 
 Etter installasjon, verifiser:
 ```bash
-stubby -l 2>&1 | head -5   # skal vise "GETDNS_TRANSPORT_TLS"
-dig +short txt proto.nameserver.9.9.9.9.io   # skal svare "dot"
+ps | grep stubby              # skal vise stubby-prosessen som kjører
+nslookup google.com           # skal svare uten feil (DNS fungerer)
 ```
 
 ---
@@ -141,6 +147,10 @@ Noter versjonene — dette er **baseline** du skal slå med Fase 4-backportene.
 ---
 
 ## Del 4 — Ekstra sysctl-herding (manuell, valgfri)
+
+> **Forutsetning:** JFFS custom scripts må være aktivert.
+> Gå til **Administration → System → Enable JFFS custom scripts and configs → ON**
+> og lagre før du oppretter skriptet under.
 
 Disse kan legges inn i `/jffs/scripts/firewall-start` slik at de settes ved boot:
 
