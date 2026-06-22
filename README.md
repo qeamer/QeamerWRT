@@ -10,7 +10,7 @@
 [![Status](https://img.shields.io/badge/Status-Phase%200%20%E2%86%92%201-yellow.svg)]()
 
 **A hardened, custom-branded router firmware for the RT-AC87U.**  
-Updated security stack · strict firewall · encrypted DNS · your name in the UI.
+Updated security stack · strict firewall · encrypted DNS · custom branding.
 
 </div>
 
@@ -28,7 +28,7 @@ QeamerWRT is a personal firmware project built on top of **Asuswrt-Merlin 384.13
 - Closed attack surface: no WAN admin, no UPnP, no WPS
 - Strict firewall with IPSet blocklists and DDoS mitigation
 - Encrypted DNS (DNS-over-TLS + DNSSEC)
-- QeamerWRT branding and owner info in UI, login page and SSH banner
+- QeamerWRT branding baked into UI, login page and SSH banner
 
 ### It is not
 - A new kernel — the closed Broadcom `wl.ko` driver locks the kernel version
